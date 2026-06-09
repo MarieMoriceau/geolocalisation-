@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: geolocalisation
+    runtime: python
+    plan: starter
+    region: frankfurt
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true --server.enableCORS false --server.enableXsrfProtection false
+    envVars:
+      - key: APP_PASSWORD
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+    disk:
+      name: geoloc-data
+      mountPath: /var/data
+      sizeGB: 1
