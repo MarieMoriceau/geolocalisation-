@@ -26,8 +26,8 @@ META_FILE = os.path.join(DATA_DIR, "metadata.json")
 HISTORY_FILE = os.path.join(DATA_DIR, "history.json")
 HISTORY_MAX = 20  # Nombre max d'entrées conservées
 
-BAN_SEARCH = "https://api-adresse.data.gouv.fr/search/"
-BAN_BATCH = "https://api-adresse.data.gouv.fr/search/csv/"
+BAN_SEARCH = "https://data.geopf.fr/geocodage/search//"
+BAN_BATCH = "https://data.geopf.fr/geocodage/search/csv/"
 
 # Mot de passe admin (à changer dans les Secrets HF : ADMIN_PASSWORD)
 # .strip() pour nettoyer les sauts de ligne / espaces parasites du copier-coller
